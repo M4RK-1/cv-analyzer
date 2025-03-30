@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <h1>Register</h1>
+    <form method="POST">
+        <input name="username" placeholder="Username" required>
+        <input name="password" type="password" placeholder="Password" required>
+        <button type="submit">Submit</button>
+    </form>
+    {% if hashed %}
+        <p>Hashed Password: <code>{{ hashed }}</code></p>
+    {% endif %}
+{% endblock %}
